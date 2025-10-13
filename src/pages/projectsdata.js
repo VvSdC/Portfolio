@@ -1,5 +1,11 @@
 const projectsdata = [
     {
+        title: "SAHAYAK AI",
+        image: "./teacher.svg",
+        description: "AI-Powered Teaching Assistant for Multigrade Classrooms",
+        link: "https://github.com/VvSdC/Sahayak-AI",
+    },
+    {
         title : "EASY SHOP",
         image : "./cart.svg",
         description : "EasyShop is a friendly online shopping app that helps you easily find and buy products.",

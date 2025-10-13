@@ -93,41 +93,44 @@ function Home() {
         <div className='row mt-5'>
           <div className='col-md-4'>
             <div className='font-bold text-center'>
-              <h4 className='font-bold'>Front-end</h4>
+              <h4 className='font-bold'>GenAI/ML/DL/NLP</h4>
               <hr />
-              <p></p>
-              <p>JavaScript</p>
-              <p>Next.JS</p>
-              <p>React.JS</p>
-              <p>Embedded JavaScript</p>
-              <p>Redux</p>
-              <p>CSS</p>
-              <p>Bootstrap</p>
+              <p>LangChain</p>
+              <p>LangGraph</p>
+              <p>Responsible AI</p>
+              <p>MCP and A2A</p>
+              <p>AI Agents</p>
+              <p>PyTorch</p>
+              <p>Scikit Learn</p>
+              <p>Supervised Fine Tuning</p>
+              <p>Artificial Neural Networks</p>
+              <p>Natural Language Processing</p>
             </div>
           </div>
 
           <div className='col-md-4'>
             <div className='font-bold text-center'>
-              <h4 className='font-bold'>Back-end / Databases</h4>
+              <h4 className='font-bold'>Full Stack Development</h4>
               <hr />
+              <p>React.JS</p>
               <p>Node.JS</p>
               <p>Express.JS</p>
-              <p>PHP</p>
-              <p>SQL</p>
+              <p>JavaScript</p>
               <p>MongoDB</p>
+              <p>SQL</p>
             </div>
           </div>
 
           <div className='col-md-4'>
             <div className='font-bold text-center'>
-              <h4 className='font-bold'>Other</h4>
+              <h4 className='font-bold'>Other Skills</h4>
               <hr />
-              <p>C/C++</p>
+              <p>Competitive Programming</p>
               <p>Data Structures and Algorithms</p>
-              <p>Object Oriented Programming Concepts</p>
-              <p>DataBase Management System</p>
+              <p>Database Management System</p>
               <p>Operating System</p>
-              <p>Computer networks</p>
+              <p>Benchmarking</p>
+              <p>Object Oriented Programming</p>
             </div>
           </div>
         </div>
