@@ -36,7 +36,15 @@ function Home() {
                 <div>Full Stack professional</div>
               </div>
             </div>
-            <button className='primary-button font-bold'><Link to='https://drive.google.com/file/d/1m3QAKV2U_6jeGP3wQJ1d_y5Sx368iTea/view?usp=drive_link' target='_blank' style={{ textDecoration: "none", color: 'white', fontWeight: 'bold' }}>My Resume</Link></button>
+            <button className='primary-button font-bold'>
+              <Link
+                to='https://drive.google.com/file/d/1C2KF2untEYZd3PwYJ1BOUK2icTHLJyNU/view?usp=sharing'
+                target='_blank'
+                style={{ textDecoration: "none", color: 'white', fontWeight: 'bold' }}
+              >
+                My Resume
+              </Link>
+            </button>
           </div>
 
           <div class="snowflakes" aria-hidden="true">
