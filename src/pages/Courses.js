@@ -5,17 +5,18 @@ import skillslist from './coursesdata.js';
 function Courses() {
     return (
         <div>
-            <Header/>
+            <Header />
             <div className='courses-intro' style={{ backgroundImage: `url('./courses.svg')` }}>
                 <div className='courses-intro-content'>
                     <h1>About Me</h1>
 
                     <div>
                         <p>
-                            "I'm an adept programmer, skilled in communication and adaptable. Proficient in Frontend and Backend technologies, with MERN Stack expertise. Strong in Data Structures, Algorithms, and collaborative problem-solving. Committed to team success, effective in building social connections."
+                            I am an AI engineer passionate about building responsible and ethical AI solutions. My expertise spans Generative AI, agent workflows with LangChain and LangGraph, and advanced knowledge management using Retrieval-Augmented Generation (RAG). I design collaborative agent systems leveraging Model Context Protocol (MCP) and agent-to-agent (A2A) communication, always prioritizing safety, transparency, fairness, and explainability to ensure reliable outcomes.<br /><br />
+                            Beyond AI, I deliver robust, scalable applications using the MERN stack and both SQL and NoSQL databases, including MongoDB and Elasticsearch. My approach combines technical excellence with a commitment to ethical innovation, shaping impactful solutions that drive progress with integrity.
                         </p>
 
-                        <button className='primary-button'><a href='#whyme' style={{textDecoration:'none',color:'white',fontWeight:'bold',fontSize:'18px'}}>Get Started</a></button>
+                        <button className='primary-button'><a href='#whyme' style={{ textDecoration: 'none', color: 'white', fontWeight: 'bold', fontSize: '18px' }}>Get Started</a></button>
                     </div>
                 </div>
             </div>
@@ -25,10 +26,7 @@ function Courses() {
                     <h1>Why Me?</h1>
                     <div className='why-me-content'>
                         <p>
-                            I thrive in the electrifying arena of competitive programming.</p>
-                        <br/>
-                        <p>
-                            So , confronting novel challenges is not just a habit! it's my exhilarating journey to perpetual growth and triumph.
+                            I bring a unique blend of expertise in responsible AI and full-stack development. My focus on building ethical, secure, and transparent AI systems ensures solutions that are not only innovative but also trustworthy. With a passion for solving complex problems, I deliver impactful technology that drives progress with integrity.
                         </p>
                     </div>
                 </div>
@@ -36,11 +34,11 @@ function Courses() {
 
             <div className='container projects-list'>
                 <h3 className='font-bold'>My Skills</h3>
-                <hr/>
+                <hr />
 
                 <div className='row'>
                     {
-                        skillslist.map(skill =>{
+                        skillslist.map(skill => {
                             return <div className='col-md-4'>
                                 <div className='position-relative project'>
                                     <img src={skill.image} alt={skill.title} className='w-100'></img>

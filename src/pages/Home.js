@@ -30,10 +30,10 @@ function Home() {
             <div className='animated-description'>
               I am a
               <div className="dropping-texts">
-                <div> MERN stack developer</div>
-                <div> C++ developer</div>
-                <div> Competitive programmer</div>
-                <div> PHP-SQL developer</div>
+                <div>Responsible AI engineer</div>
+                <div>Machine Learning engineer</div>
+                <div>Generative AI professional</div>
+                <div>Full Stack professional</div>
               </div>
             </div>
             <button className='primary-button font-bold'><Link to='https://drive.google.com/file/d/1m3QAKV2U_6jeGP3wQJ1d_y5Sx368iTea/view?usp=drive_link' target='_blank' style={{ textDecoration: "none", color: 'white', fontWeight: 'bold' }}>My Resume</Link></button>
