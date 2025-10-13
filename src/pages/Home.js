@@ -99,7 +99,7 @@ function Home() {
         </div>
 
         <div className='row mt-5'>
-          <div className='col-md-4'>
+          <div className='col-md-4 mb-4'>
             <div className='font-bold text-center'>
               <h4 className='font-bold'>GenAI/ML/DL/NLP</h4>
               <hr />
@@ -116,7 +116,7 @@ function Home() {
             </div>
           </div>
 
-          <div className='col-md-4'>
+          <div className='col-md-4 mb-4'>
             <div className='font-bold text-center'>
               <h4 className='font-bold'>Full Stack Development</h4>
               <hr />
@@ -129,7 +129,7 @@ function Home() {
             </div>
           </div>
 
-          <div className='col-md-4'>
+          <div className='col-md-4 mb-4'>
             <div className='font-bold text-center'>
               <h4 className='font-bold'>Other Skills</h4>
               <hr />

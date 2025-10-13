@@ -12,8 +12,7 @@ function Courses() {
 
                     <div>
                         <p>
-                            I am an AI engineer passionate about building responsible and ethical AI solutions. My expertise spans Generative AI, agent workflows with LangChain and LangGraph, and advanced knowledge management using Retrieval-Augmented Generation (RAG). I design collaborative agent systems leveraging Model Context Protocol (MCP) and agent-to-agent (A2A) communication, always prioritizing safety, transparency, fairness, and explainability to ensure reliable outcomes.<br /><br />
-                            Beyond AI, I deliver robust, scalable applications using the MERN stack and both SQL and NoSQL databases, including MongoDB and Elasticsearch. My approach combines technical excellence with a commitment to ethical innovation, shaping impactful solutions that drive progress with integrity.
+                            I am an AI engineer focused on responsible and ethical AI. I build agent workflows with LangChain, LangGraph, and RAG, and enable smart collaboration using MCP and A2A. With MERN stack and database expertise, I deliver robust, scalable, and trustworthy solutions.
                         </p>
 
                         <button className='primary-button'><a href='#whyme' style={{ textDecoration: 'none', color: 'white', fontWeight: 'bold', fontSize: '18px' }}>Get Started</a></button>
@@ -26,7 +25,7 @@ function Courses() {
                     <h1>Why Me?</h1>
                     <div className='why-me-content'>
                         <p>
-                            I bring a unique blend of expertise in responsible AI and full-stack development. My focus on building ethical, secure, and transparent AI systems ensures solutions that are not only innovative but also trustworthy. With a passion for solving complex problems, I deliver impactful technology that drives progress with integrity.
+                            I stand out for my focus on responsible AI and practical engineering, ensuring every solution is trustworthy and effective.
                         </p>
                     </div>
                 </div>
