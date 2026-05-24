@@ -9,7 +9,7 @@ import {
   FaRobot,
 } from "react-icons/fa";
 import AOS from "aos";
-import { CONTACT_EMAIL, MAILTO_LINK } from "../constants/contact";
+import { CONTACT_EMAIL, MAILTO_LINK, LINKEDIN_URL } from "../constants/contact";
 import "../stylesheets/contact.css";
 
 const contactLinks = [
@@ -28,7 +28,7 @@ const contactLinks = [
   {
     label: "LinkedIn",
     value: "vummethala-venkata-sri-datta-charan",
-    href: "https://www.linkedin.com/in/vummethala-venkata-sri-datta-charan",
+    href: LINKEDIN_URL,
     icon: FaLinkedin,
   },
   {

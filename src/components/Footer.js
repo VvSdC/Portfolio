@@ -1,11 +1,11 @@
 import React from "react";
 import { FaLinkedin, FaMailBulk, FaGithub, FaRobot, FaMapMarkerAlt } from "react-icons/fa";
-import { CONTACT_EMAIL, MAILTO_LINK } from "../constants/contact";
+import { CONTACT_EMAIL, MAILTO_LINK, LINKEDIN_URL } from "../constants/contact";
 
 const socialLinks = [
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/vummethala-venkata-sri-datta-charan",
+    href: LINKEDIN_URL,
     icon: FaLinkedin,
   },
   { label: "Email", href: MAILTO_LINK, icon: FaMailBulk },
