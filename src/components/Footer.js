@@ -1,37 +1,100 @@
-import React from 'react'
-import { FaLinkedin, FaMailBulk, FaGithub, FaRobot } from 'react-icons/fa'
+import React from "react";
+import { FaLinkedin, FaMailBulk, FaGithub, FaRobot, FaMapMarkerAlt } from "react-icons/fa";
+import { CONTACT_EMAIL, MAILTO_LINK } from "../constants/contact";
 
-function Footer(){
-    return (
-        <div>
-            <div className='footer'>
-            <svg className='wave' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="black" fill-opacity="1" d="M0,128L48,154.7C96,181,192,235,288,250.7C384,267,480,245,576,213.3C672,181,768,139,864,144C960,149,1056,203,1152,208C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+const socialLinks = [
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/vummethala-venkata-sri-datta-charan",
+    icon: FaLinkedin,
+  },
+  { label: "Email", href: MAILTO_LINK, icon: FaMailBulk },
+  { label: "GitHub", href: "https://github.com/VvSdC", icon: FaGithub },
+  {
+    label: "Hugging Face",
+    href: "https://huggingface.co/vvsd-charan",
+    icon: FaRobot,
+  },
+];
 
-                <div className='row footer-content justify-content-center'>
-                    <div className='col-md-6'>
-                        <div className='div'>
-                            <p>Connect With Me</p>
-                            <hr/>
+function Footer() {
+  return (
+    <footer className="footer">
+      <svg
+        className="wave"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        aria-hidden="true"
+      >
+        <path
+          fill="black"
+          fillOpacity="1"
+          d="M0,128L48,154.7C96,181,192,235,288,250.7C384,267,480,245,576,213.3C672,181,768,139,864,144C960,149,1056,203,1152,208C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        />
+      </svg>
 
-                            <div className='d-flex justify-content-center gap-4 px-2'>
-                                <a href='https://www.linkedin.com/in/vummethala-venkata-sri-datta-charan' target='_blank' rel="noreferrer"><FaLinkedin className='footer-icons'/></a>
-                                <a href='mailto:charan.vvsd@gmail.com' target='_blank' rel="noreferrer"><FaMailBulk className='footer-icons'/></a>
-                                <a href='https://github.com/VvSdC' target='_blank' rel="noreferrer"><FaGithub className='footer-icons'/></a>
-                                <a href='https://huggingface.co/vvsd-charan' target='_blank' rel="noreferrer" title="Hugging Face"><FaRobot className='footer-icons'/></a>
-                            </div>
-                            <hr/>
-
-                            <br/>
-                            <p>
-                               &copy; Vummethala Venkata Sri Datta Charan
-                            </p>
-                            <p className='footer-meta'>Hyderabad, India · vvsd-charan.netlify.app</p>
-                        </div>
-                    </div>
-                </div>
+      <div className="footer-content">
+        <div className="container footer-inner">
+          <div className="footer-top">
+            <div className="footer-brand">
+              <p className="footer-name font-bold">VVSD Charan</p>
+              <p className="footer-role">Responsible AI Engineer</p>
+              <p className="footer-tagline">
+                LLM safety · Agentic AI · Full Stack
+              </p>
             </div>
+
+            <div className="footer-connect">
+              <p className="footer-heading">Connect With Me</p>
+              <div className="footer-social">
+                {socialLinks.map((link) => {
+                  const Icon = link.icon;
+                  return (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="footer-social-link"
+                      aria-label={link.label}
+                      title={link.label}
+                    >
+                      <Icon className="footer-icons" />
+                    </a>
+                  );
+                })}
+              </div>
+              <a href={MAILTO_LINK} className="footer-email">
+                {CONTACT_EMAIL}
+              </a>
+            </div>
+
+            <div className="footer-location-block">
+              <p className="footer-heading">Location & Site</p>
+              <p className="footer-location">
+                <FaMapMarkerAlt className="footer-location-icon" />
+                Hyderabad, India
+              </p>
+              <a
+                href="https://vvsd-charan.netlify.app"
+                target="_blank"
+                rel="noreferrer"
+                className="footer-site-link"
+              >
+                vvsd-charan.netlify.app
+              </a>
+            </div>
+          </div>
+
+          <hr className="footer-divider" />
+
+          <p className="footer-copyright">
+            &copy; {new Date().getFullYear()} Vummethala Venkata Sri Datta Charan
+          </p>
         </div>
-    )
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
