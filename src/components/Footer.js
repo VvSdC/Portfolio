@@ -1,5 +1,5 @@
 import React from 'react'
-import {FaInstagram,FaLinkedin,FaTwitter,FaMailBulk,FaGithub} from 'react-icons/fa'
+import { FaLinkedin, FaMailBulk, FaGithub, FaRobot } from 'react-icons/fa'
 
 function Footer(){
     return (
@@ -10,22 +10,22 @@ function Footer(){
                 <div className='row footer-content justify-content-center'>
                     <div className='col-md-6'>
                         <div className='div'>
-                            <p>My Handle Links</p>
+                            <p>Connect With Me</p>
                             <hr/>
 
-                            <div className='d-flex justify-content-between px-2'>
-                                <a href='https://www.instagram.com/vvs.dc/' target='_blank' rel="noreferrer"><FaInstagram className='footer-icons'/></a>
-                                <a href='https://www.linkedin.com/in/vvsd-charan-0938b81bb/' target='_blank' rel="noreferrer"><FaLinkedin className='footer-icons'/></a>
-                                <a href='https://twitter.com/VVSD_Charan' target='_blank' rel="noreferrer"><FaTwitter className='footer-icons'/></a>
-                                <a href='mailto:vvsdcharan2001@gmail.com' target='_blank' rel="noreferrer"><FaMailBulk className='footer-icons'/></a>
-                                <a href='https://github.com/VVSD-Charan' target='_blank' rel="noreferrer"><FaGithub className='footer-icons'/></a>
+                            <div className='d-flex justify-content-center gap-4 px-2'>
+                                <a href='https://www.linkedin.com/in/vummethala-venkata-sri-datta-charan' target='_blank' rel="noreferrer"><FaLinkedin className='footer-icons'/></a>
+                                <a href='mailto:charan.vvsd@gmail.com' target='_blank' rel="noreferrer"><FaMailBulk className='footer-icons'/></a>
+                                <a href='https://github.com/VvSdC' target='_blank' rel="noreferrer"><FaGithub className='footer-icons'/></a>
+                                <a href='https://huggingface.co/vvsd-charan' target='_blank' rel="noreferrer" title="Hugging Face"><FaRobot className='footer-icons'/></a>
                             </div>
                             <hr/>
 
                             <br/>
                             <p>
-                               &copy; VVSD Charan 
+                               &copy; Vummethala Venkata Sri Datta Charan
                             </p>
+                            <p className='footer-meta'>Hyderabad, India · vvsd-charan.netlify.app</p>
                         </div>
                     </div>
                 </div>

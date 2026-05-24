@@ -1,62 +1,130 @@
-import React from 'react'
-import Header from '../components/Header';
-import { FaLaptopCode } from 'react-icons/fa'
-import projectsdata from './projectsdata';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from "react";
+import Header from "../components/Header";
+import { FaLaptopCode, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import projectsdata from "./projectsdata";
+import { Link } from "react-router-dom";
+import AOS from "aos";
+import "../stylesheets/projects.css";
 
 function Projects() {
-    return (
-        <div>
-            <Header />
+  useEffect(() => {
+    AOS.refresh();
+  }, []);
 
-            {/* Intro to projects  */}
-            <div className='container projects-intro'>
-                <div className='row flex-with-center mt-5'>
+  return (
+    <div className="projects-page">
+      <Header />
 
-                    <div className='col-md-6 n-box2 px-3 py-5'>
-                        <div>
-                            <h1 className='font-bold'>Projects</h1>
-                            <p className='font-bold'>Great ideas don't become reality overnight; they demand dedicated practice and unwavering patience to be embraced.</p>
-                            <button className='primary-button'><a href='#projectsList' style={{textDecoration:"none",color:"white",fontWeight:'bold'}}>Get Started</a></button>
-                        </div>
-                    </div>
-                    {/* Blob  */}
-                    <div className='col-md-6 position-relative'>
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <path fill="#0F62FE" d="M41.5,-65.3C54,-56.5,64.5,-45.4,71.5,-32.1C78.5,-18.8,81.9,-3.2,77.4,9.4C72.9,22,60.4,31.8,50.6,44.9C40.9,57.9,33.7,74.3,22.7,77.7C11.7,81,-3.2,71.3,-17.5,64.8C-31.9,58.3,-45.6,54.9,-57.8,46.8C-70,38.7,-80.6,25.9,-81.5,12.4C-82.5,-1.2,-73.8,-15.5,-65.2,-27.8C-56.5,-40.1,-47.7,-50.4,-36.9,-59.9C-26,-69.5,-13,-78.4,0.7,-79.5C14.5,-80.7,28.9,-74.1,41.5,-65.3Z" transform="translate(100 100)" />
-                        </svg>
-
-                        <FaLaptopCode className='position-absolute top-50 start-50 translate-middle' color='white'
-                            size='180px' />
-                    </div>
+      <section className="projects-hero">
+        <div className="container">
+          <div
+            className="projects-hero-card"
+            data-aos="fade-up"
+            data-aos-duration="700"
+          >
+            <div className="projects-hero-bg-shape" aria-hidden="true" />
+            <div className="row align-items-center g-4">
+              <div className="col-lg-7 projects-hero-content">
+                <span className="projects-hero-eyebrow">
+                  <FaLaptopCode className="me-2" />
+                  Portfolio Work
+                </span>
+                <h1 className="font-bold projects-hero-title">Projects</h1>
+                <p className="projects-hero-text">
+                  Production-oriented builds spanning agentic e-commerce, AI safety
+                  gateways, and responsible AI systems — designed for real-world
+                  scale and security.
+                </p>
+                <div className="projects-hero-tags">
+                  <span>Full Stack</span>
+                  <span>Agentic AI</span>
+                  <span>AI Guardrails</span>
+                  <span>Cloud Deployed</span>
                 </div>
-            </div>
+                <a href="#projectsList" className="projects-hero-cta">
+                  View Projects
+                </a>
+              </div>
 
-            {/* List of projects  */}
-            <div className='container projects-list' id='projectsList'>
-                <h3 className='font-bold'>My Projects</h3>
-                <hr/>
-
-                <div className='row'>
-                    {
-                        projectsdata.map(project =>{
-                            return <div className='col-md-4'>
-                                <div className='position-relative project'>
-                                    <img src={project.image} alt={project.title}></img>
-                                    <div className='project-content'>
-                                        <h3>{project.title}</h3>
-                                        <hr/>
-                                        <p>{project.description}</p>
-                                        <button className='primary-button'><Link to={project.link} target='_blank' style={{textDecoration:"none",color:"white",fontWeight:'bold'}}>DEMO</Link></button>
-                                    </div>
-                                </div>
-                            </div>
-                        })
-                    }
+              <div
+                className="col-lg-5 projects-hero-visual"
+                data-aos="zoom-in"
+                data-aos-delay="150"
+              >
+                <div className="projects-hero-orbit">
+                  <div className="projects-hero-ring" aria-hidden="true" />
+                  <div className="projects-hero-ring-inner">
+                    <FaLaptopCode className="projects-hero-icon" />
+                  </div>
+                  <span className="projects-hero-stat projects-hero-stat-top">
+                    2 Featured Builds
+                  </span>
+                  <span className="projects-hero-stat projects-hero-stat-bottom">
+                    Open Source & Live Demo
+                  </span>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    )
+      </section>
+
+      <div className="container projects-list" id="projectsList">
+        <div className="projects-section-header" data-aos="fade-up">
+          <span className="projects-section-icon">
+            <FaGithub />
+          </span>
+          <h3 className="font-bold">Featured Projects</h3>
+          <span className="projects-section-line" aria-hidden="true" />
+        </div>
+
+        <div className="row g-4">
+          {projectsdata.map((project, index) => (
+            <div
+              key={project.title}
+              className="col-lg-6"
+              data-aos="fade-up"
+              data-aos-delay={index * 120}
+            >
+              <article className="project-card">
+                <div className="project-card-accent" aria-hidden="true" />
+                <div className="project-card-image">
+                  <img src={project.image} alt={project.title} />
+                </div>
+                <div className="project-card-body">
+                  <h3 className="font-bold project-card-title">
+                    {project.title}
+                  </h3>
+                  <p className="project-card-summary">{project.summary}</p>
+                  <ul className="project-card-highlights">
+                    {project.highlights.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                  <div className="project-card-tech">
+                    {project.tech.map((tag) => (
+                      <span key={tag} className="project-tech-tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <Link
+                    to={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project-card-cta"
+                  >
+                    View Project
+                    <FaExternalLinkAlt className="ms-2" />
+                  </Link>
+                </div>
+              </article>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Projects;

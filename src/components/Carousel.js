@@ -1,34 +1,49 @@
 import React from "react";
-import { 
-    SiOpenai, 
-    SiPytorch, 
-    SiMongodb, 
-    SiReact, 
-    SiScikitlearn,
-    SiJavascript,
-    SiGithub,
-    SiPython
-} from 'react-icons/si';
+
+const technologies = [
+  { name: "Python", image: "./python.svg" },
+  { name: "PyTorch", image: "./pytorch.svg" },
+  { name: "Scikit-learn", image: "./scikit-learn.svg" },
+  { name: "OpenAI / LLMs", image: "./openai.svg" },
+  { name: "Machine Learning", image: "./ml.svg" },
+  { name: "Deep Learning", image: "./deep-learning.svg" },
+  { name: "Responsible AI", image: "./responsible-ai.svg" },
+  { name: "Generative AI", image: "./ai.svg" },
+  { name: "NLP", image: "./nlp.svg" },
+  { name: "Supervised Fine-Tuning", image: "./fine-tuning.svg" },
+  { name: "MCP", image: "./mcp.svg" },
+  { name: "Agentic AI", image: "./ai-agents.svg" },
+];
 
 function Carousel() {
-    return (
-        <div>
-            <div className="carousel-parent position-relative">
-                <h1 className="position-absolute top-0 start-0 end-0 text-center mt-5 animated-tech">Technologies I use</h1>
+  const angleStep = 360 / technologies.length;
 
-                <div className="gallery">
-                    <span style={{'--i' : 1}}><SiOpenai color="#00A67E"/></span>
-                    <span style={{'--i' : 2}}><SiPytorch color="#EE4C2C"/></span>
-                    <span style={{'--i' : 3}}><SiPython color="#3776AB"/></span>
-                    <span style={{'--i' : 4}}><SiReact color="#61DAFB"/></span>
-                    <span style={{'--i' : 5}}><SiScikitlearn color="#F7931E"/></span>
-                    <span style={{'--i' : 6}}><SiJavascript color="#F7DF1E"/></span>
-                    <span style={{'--i' : 7}}><SiMongodb color="#47A248"/></span>
-                    <span style={{'--i' : 8}}><SiGithub color="#181717"/></span>
-                </div>
-            </div>
+  return (
+    <div>
+      <div className="carousel-parent position-relative">
+        <header className="carousel-header">
+          <h1 className="animated-tech">Technologies I use</h1>
+          <p className="carousel-subtitle">
+            Responsible AI · Generative AI · Machine Learning
+          </p>
+        </header>
+
+        <div className="gallery">
+          {technologies.map((tech, index) => (
+            <span
+              key={tech.name}
+              className="tech-carousel-item"
+              style={{ "--i": index + 1, "--step": `${angleStep}deg` }}
+              title={tech.name}
+            >
+              <img src={tech.image} alt="" aria-hidden="true" />
+              <span className="tech-label">{tech.name}</span>
+            </span>
+          ))}
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 
 export default Carousel;

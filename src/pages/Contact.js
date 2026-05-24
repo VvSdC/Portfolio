@@ -19,7 +19,7 @@ function Contact() {
           <div className='col-md-6'>
             <form
               className='contact-form m-2 p-5 n-box2'
-              action='mailto:vvsdcharan2001@gmail.com'
+              action='mailto:charan.vvsd@gmail.com'
               method='post'
               encType='text/plain'
               onSubmit={reloadPage} // Assign the function to onSubmit

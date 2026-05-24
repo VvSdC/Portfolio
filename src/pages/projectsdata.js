@@ -1,46 +1,44 @@
 const projectsdata = [
-    {
-        title: "SAHAYAK AI",
-        image: "./teacher.svg",
-        description: "AI-Powered Teaching Assistant for Multigrade Classrooms",
-        link: "https://github.com/VvSdC/Sahayak-AI",
-    },
-    {
-        title : "EASY SHOP",
-        image : "./cart.svg",
-        description : "EasyShop is a friendly online shopping app that helps you easily find and buy products.",
-        link : "https://github.com/VVSD-Charan/EasyShop",
-    },
-    {
-        title : "STAY SCOUT",
-        image : "./home.svg",
-        description : "StayScout is an innovative and user-friendly application designed to simplify the process of finding and adding rental rooms. ",
-        link : "https://github.com/VVSD-Charan/StayScout",
-    },
-    {
-        title : "DECOR MART",
-        image : "./decormart.svg",
-        description : "Decor Mart is a website where you can shop for home decor items.",
-        link : "https://github.com/VVSD-Charan/DecorMart",
-    },
-    {
-        title : "TECH OVERFLOW",
-        image : "./techoverflow.svg",
-        description : "TechOverflow is an interactive online forum where users can share their queries regarding the latest technologies, find solutions, and offer assistance to fellow software engineers.",
-        link : "https://github.com/VVSD-Charan/TechOverflow",
-    },
-    {
-        title : "IMAGE EXPLORER",
-        image : "./imagefinder.svg",
-        description : "This project enables users to effortlessly discover images based on specific categories or types.",
-        link : "https://github.com/VVSD-Charan/Image-Explorer",
-    },
-    {
-        title : "FUNDAMENTAL PROJECTS",
-        image : "./react.svg",
-        description : "This repository serves as a valuable resource for fundamental React projects that can be utilized as references in larger-scale projects",
-        link : "https://github.com/VVSD-Charan/React-Fundamental-Projects",
-    }
-]
+  {
+    title: "Shop AI",
+    image: "./cart.svg",
+    summary:
+      "Hybrid agentic e-commerce platform with a natural language AI workspace for cart and order management.",
+    highlights: [
+      "Execution sandbox with secure tool-calling",
+      "Stripe webhooks, JWT auth & moderation layer",
+      "LLM-driven metadata extraction pipeline",
+    ],
+    tech: [
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "LLM Agents",
+      "Stripe",
+      "Cloudinary",
+    ],
+    link: "https://github.com/VvSdC/ShopAI",
+  },
+  {
+    title: "AEGIS",
+    image: "./responsible-ai.svg",
+    summary:
+      "AI Ethics & Governance gateway proxy with real-time guardrails and dual-tier safety screening.",
+    highlights: [
+      "Regex/YARA pass under 30ms + Gemini semantic layer",
+      "91 prompt-injection topologies covered",
+      "SAST response checks across OWASP LLM paths",
+    ],
+    tech: [
+      "Python",
+      "GCP Cloud Run",
+      "YARA",
+      "SAST",
+      "Gemini",
+      "Semgrep",
+    ],
+    link: "https://aegis-backend-6y5ofugcka-el.a.run.app",
+  },
+];
 
-export default projectsdata
+export default projectsdata;

@@ -1,0 +1,647 @@
+.experience-page {
+  background-color: #ebecf0;
+}
+
+.experience-hero {
+  padding: 2rem 0 2.5rem;
+}
+
+.experience-hero-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f4f6ff 100%);
+  border: 1px solid rgba(15, 98, 254, 0.15);
+  box-shadow: 8px 8px 0 #cacbce, -8px -8px 0 #ffffff;
+}
+
+.experience-hero-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #0f62fe, #37b5b6, #86a7fc);
+  z-index: 1;
+}
+
+.experience-hero-bg-shape {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(15, 98, 254, 0.12) 0%,
+    transparent 70%
+  );
+  top: -120px;
+  right: -80px;
+  pointer-events: none;
+  animation: experience-hero-glow 6s ease-in-out infinite;
+}
+
+@keyframes experience-hero-glow {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+.experience-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.experience-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #0f62fe, #37b5b6);
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 6px 18px rgba(15, 98, 254, 0.3);
+}
+
+.experience-hero-title {
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #0f62fe 0%, #37b5b6 50%, #1a1a2e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.15;
+}
+
+.experience-hero-text {
+  color: #4a5568;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 560px;
+  margin-bottom: 1.25rem;
+}
+
+.experience-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-hero-tags span {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #0f62fe;
+  background: rgba(15, 98, 254, 0.08);
+  border: 1px solid rgba(15, 98, 254, 0.22);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.experience-hero-tags span:hover {
+  background: rgba(15, 98, 254, 0.15);
+  transform: translateY(-2px);
+}
+
+.experience-hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.25rem;
+  padding: 12px 32px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #0f62fe, #37b5b6);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(15, 98, 254, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-hero-cta:hover {
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(55, 181, 182, 0.45);
+}
+
+.experience-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.experience-hero-orbit {
+  position: relative;
+  width: 240px;
+  height: 240px;
+}
+
+.experience-hero-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #0f62fe,
+    #37b5b6,
+    #86a7fc,
+    #0f62fe
+  );
+  animation: experience-hero-spin 10s linear infinite;
+}
+
+@keyframes experience-hero-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.experience-hero-ring-inner {
+  position: absolute;
+  inset: 10px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #f4f6ff, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 24px rgba(15, 98, 254, 0.08);
+}
+
+.experience-hero-ring-inner .experience-intro-icon {
+  font-size: 5rem;
+  color: #0f62fe;
+}
+
+.experience-hero-stat {
+  position: absolute;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(145deg, #0a0a0f, #151528);
+  border: 1px solid rgba(15, 98, 254, 0.4);
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.experience-hero-stat-top {
+  top: 8%;
+  right: -8%;
+  animation: experience-hero-stat-float 4s ease-in-out infinite;
+}
+
+.experience-hero-stat-bottom {
+  bottom: 10%;
+  left: -12%;
+  animation: experience-hero-stat-float 4s ease-in-out infinite 1.2s;
+}
+
+@keyframes experience-hero-stat-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.experience-intro-icon {
+  animation: experience-icon-float 4s ease-in-out infinite;
+}
+
+@keyframes experience-icon-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.experience-list {
+  overflow: hidden;
+  padding-bottom: 100px;
+}
+
+.experience-section {
+  margin-bottom: 4rem;
+}
+
+.experience-section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.experience-section-header h3 {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 1.75rem;
+}
+
+.experience-section-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #0f62fe, #37b5b6);
+  color: #fff;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(15, 98, 254, 0.35);
+  animation: experience-icon-pulse 3s ease-in-out infinite;
+}
+
+@keyframes experience-icon-pulse {
+  0%,
+  100% {
+    box-shadow: 0 8px 20px rgba(15, 98, 254, 0.35);
+  }
+  50% {
+    box-shadow: 0 8px 28px rgba(55, 181, 182, 0.55);
+  }
+}
+
+.experience-section-line {
+  flex: 1;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #0f62fe, transparent);
+}
+
+.experience-timeline {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  bottom: 8px;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #0f62fe 0%, #37b5b6 50%, #86a7fc 100%);
+  animation: experience-line-grow 1.2s ease-out forwards;
+  transform-origin: top;
+}
+
+@keyframes experience-line-grow {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.experience-card {
+  position: relative;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.experience-job-card {
+  background: #ffffff;
+  border: 1px solid rgba(15, 98, 254, 0.12);
+  box-shadow: 8px 8px 0 #cacbce, -8px -8px 0 #ffffff;
+  padding: 1.75rem 2rem;
+  margin-left: 0.5rem;
+}
+
+.experience-job-card::before {
+  content: "";
+  position: absolute;
+  left: -2.15rem;
+  top: 2rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #0f62fe;
+  border: 4px solid #ebecf0;
+  box-shadow: 0 0 0 4px rgba(15, 98, 254, 0.25);
+  z-index: 1;
+  animation: experience-dot-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes experience-dot-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 4px rgba(15, 98, 254, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(15, 98, 254, 0.15);
+  }
+}
+
+.experience-card-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+  background: linear-gradient(180deg, #0f62fe, #37b5b6);
+}
+
+.experience-job-card:hover {
+  transform: translateY(-6px) translateX(4px);
+  box-shadow: 12px 12px 0 #b8bac0, -10px -10px 0 #ffffff;
+}
+
+.experience-company {
+  color: #0f62fe;
+  font-size: 1.35rem;
+}
+
+.experience-role {
+  color: #1a1a2e;
+}
+
+.experience-subtitle {
+  color: #5a6270;
+  font-size: 0.95rem;
+}
+
+.experience-location {
+  color: #5a6270;
+  font-size: 0.9rem;
+}
+
+.experience-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #0f62fe, #37b5b6);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.experience-subsection {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px dashed rgba(15, 98, 254, 0.2);
+}
+
+.experience-subsection-title {
+  color: #1a1a2e;
+  font-size: 1.05rem;
+  margin-bottom: 0.85rem;
+  padding-left: 0.75rem;
+  border-left: 3px solid #37b5b6;
+}
+
+.experience-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.experience-highlights li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  color: #333;
+  animation: experience-highlight-in 0.5s ease backwards;
+}
+
+.experience-highlights li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: #0f62fe;
+  font-weight: bold;
+}
+
+.experience-highlights li:nth-child(1) {
+  animation-delay: 0.05s;
+}
+.experience-highlights li:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.experience-highlights li:nth-child(3) {
+  animation-delay: 0.15s;
+}
+.experience-highlights li:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.experience-highlights li:nth-child(5) {
+  animation-delay: 0.25s;
+}
+.experience-highlights li:nth-child(6) {
+  animation-delay: 0.3s;
+}
+
+@keyframes experience-highlight-in {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.experience-timeline-edu::before {
+  background: linear-gradient(180deg, #37b5b6, #86a7fc);
+}
+
+.experience-edu-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  background: linear-gradient(135deg, #ffffff 0%, #f4f6ff 100%);
+  border: 1px solid rgba(55, 181, 182, 0.2);
+  box-shadow: 6px 6px 0 #cacbce, -6px -6px 0 #ffffff;
+  padding: 1.5rem 1.75rem;
+  margin-left: 0.5rem;
+}
+
+.experience-edu-card::before {
+  background: #37b5b6;
+  box-shadow: 0 0 0 4px rgba(55, 181, 182, 0.25);
+}
+
+.experience-edu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 0 #b8bac0, -8px -8px 0 #ffffff;
+}
+
+.experience-edu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #37b5b6, #86a7fc);
+  color: #fff;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.experience-edu-body {
+  flex: 1;
+}
+
+.experience-degree {
+  color: #1a1a2e;
+  font-weight: 600;
+}
+
+.experience-detail {
+  color: #5a6270;
+  font-size: 0.95rem;
+}
+
+.cert-grid {
+  margin-top: 0.5rem;
+}
+
+.cert-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  padding: 1.75rem 1.5rem;
+  background: linear-gradient(145deg, #0a0a0f, #151528);
+  border: 1px solid rgba(15, 98, 254, 0.35);
+  color: #ffffff;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.cert-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0f62fe, #37b5b6, #86a7fc);
+}
+
+.cert-card-glow {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(15, 98, 254, 0.35), transparent 70%);
+  top: -40px;
+  right: -40px;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  opacity: 0.6;
+}
+
+.cert-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(55, 181, 182, 0.6);
+  box-shadow: 0 16px 40px rgba(15, 98, 254, 0.25);
+}
+
+.cert-card:hover .cert-card-glow {
+  opacity: 1;
+}
+
+.cert-card-icon {
+  font-size: 2rem;
+  color: #37b5b6;
+  margin-bottom: 1rem;
+  transition: transform 0.35s ease, color 0.35s ease;
+}
+
+.cert-card:hover .cert-card-icon {
+  transform: scale(1.15) rotate(-8deg);
+  color: #86a7fc;
+}
+
+.cert-card-title {
+  color: #ffffff;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  margin-bottom: 0.65rem;
+}
+
+.cert-card-issuer {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 768px) {
+  .experience-hero-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .experience-hero-orbit {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .experience-hero-ring-inner .experience-intro-icon {
+    font-size: 3.5rem;
+  }
+
+  .experience-hero-stat-top {
+    right: -4%;
+    font-size: 0.7rem;
+    padding: 8px 10px;
+  }
+
+  .experience-hero-stat-bottom {
+    left: -4%;
+    font-size: 0.7rem;
+    padding: 8px 10px;
+  }
+
+  .experience-timeline {
+    padding-left: 1.75rem;
+  }
+
+  .experience-job-card::before {
+    left: -1.65rem;
+    width: 14px;
+    height: 14px;
+  }
+
+  .experience-section-header {
+    flex-wrap: wrap;
+  }
+
+  .experience-section-header h3 {
+    font-size: 1.35rem;
+  }
+
+  .experience-section-line {
+    width: 100%;
+    flex: none;
+  }
+
+  .experience-edu-card {
+    flex-direction: column;
+  }
+}
